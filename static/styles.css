@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+}
+
+.icon {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    .icon {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+h1 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #10a37f;
+    margin: 16px 0 0px;
+}
+
+h3 {
+    font-size: 20px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #202123;
+    margin: 0px 0 0px;
+}
+
+.description {
+    font-size: 16px;
+    color: #202123;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 40px auto;
+    height: calc(100vh - 160px);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.chat {
+    flex-grow: 1;
+    padding: 20px;
+    overflow-y: auto;
+    position: relative;
+}
+
+form {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-top: 1px solid #e0e0e0;
+}
+
+input[type="text"] {
+    padding: 12px 16px;
+    border: 1px solid #10a37f;
+    border-radius: 4px;
+    margin-top: 4px;
+    margin-bottom: 24px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+::placeholder {
+    color: #8e8ea0;
+    opacity: 1;
+}
+
+input[type="submit"] {
+    padding: 12px 16px;
+    color: #fff;
+    background-color: #10a37f;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.message {
+    max-width: 80%;
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.user-message {
+    background-color: #e0e0e0;
+    color: #333;
+    align-self: flex-start;
+    margin-left: 10px;
+}
+
+.ai-message {
+    background-color: #10a37f;
+    color: #fff;
+    align-self: flex-end;
+    margin-right: 10px;
+}
+
+pre {
+    background-color: #0b0b0b;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+code {
+    padding: 2px 4px;
+    border-radius: 3px;
+    color : #ffffff;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.copy-button {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 4px 16px;
+    border-radius: 16px;
+    cursor: pointer;
+    margin-left: 8px;
+    font-size: 12px;
+}
