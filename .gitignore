@@ -1,20 +1,17 @@
-# Ignore .env file 
+# ignore pycache
+__pycache__
+
+# ignore env
 .env
 
-# Ignore log files
-*.log
+#ignore .git
+.git
 
-# Ignore node_modules
-node_modules
+# ignore .gitignore
+.gitignore
 
-# Ignore build files
-build
-
-# Ignore coverage directory
-coverage
-
-# Ignore .DS_Store file
-.DS_Store
-
-# Ignore .vscode directory
+# ignore .vscode
 .vscode
+
+# ignore venv
+venv
