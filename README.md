@@ -1,5 +1,5 @@
 # mentor-app
-This is a simple web app that uses OpenAI's API to generate text based on the user's input. The app is designed to help me learn software development and to help me with my projects.
+I created this AI-powered mentor web app as a chat-like interface, designed to help me learn software development. Using OpenAI's API and other technologies to achieve the conversation completion pattern. The app is deployed on Heroku and can be accessed at https://sofy-ai.herokuapp.com/
 
 ## Getting Started
 
