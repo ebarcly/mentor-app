@@ -66,6 +66,6 @@ The app is deployed on Heroku and can be accessed at https://sofy-ai.herokuapp.c
 
 ## Contact
 
-Enrique Barclay - [@enriquebarclay](https://twitter.com/enriquebarclay) - email enriquebarclayrd@gmail.com
+Enrique Barclay - [@enriquebarclay](https://twitter.com/enriquebarclay) - email enriquebarclayrd at gmail dot com
 
 Project Link: [https://sofy-ai.herokuapp.com/]
