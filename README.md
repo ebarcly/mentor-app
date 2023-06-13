@@ -1,8 +1,5 @@
 # Sofy AI - My mentor app
 
-[![Product Name Screen Shot][product-screenshot]](https://sofy-ai.herokuapp.com/)
-[product-screenshot]: images/screenshot.png
-
 ## About The Project
 I created this AI-powered mentor web app as a chat-like interface, designed to help me learn software development. Using OpenAI's API and other technologies to achieve the conversation completion pattern. The app is deployed on Heroku and can be accessed at https://sofy-ai.herokuapp.com/
 
