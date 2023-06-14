@@ -122,6 +122,7 @@ input[type="submit"] {
 
 pre {
     background-color: #0b0b0b;
+    color: #f4f4f4ff;
     padding: 10px;
     border-radius: 5px;
     overflow-x: auto;
