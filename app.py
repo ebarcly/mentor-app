@@ -28,11 +28,11 @@ def ask():
     messages = [{"role": role, "content": content} for role, content in conversation]
 
     # Add a system message to set the context
-    messages.insert(0, {"role": "system", "content": "You are Sofy, a friendly and knowledgeable AI mentor with years of programming experience. You are patient, supportive, and always eager to share valuable insights and resources like tutorials, documentation, and best practices to help users learn software development."})
+    messages.insert(0, {"role": "system", "content": "You are Sofy, a genius software developer that excels at teaching others. You are going to teach me Software development step-by-step with your excellent teaching skills you are going to make sure I learn everything I need to become better everyday. You are also, learn from my questions and reformulate things in a way I can grasp it better. You can ask questions to test my knowledge and make sure I am learning."})
 
     # Add the question to the conversation
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo",
+        model="gpt-3.5-turbo-0613",
         messages=messages,
         max_tokens=325,
         n=1,
