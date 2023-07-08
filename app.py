@@ -4,9 +4,12 @@ import os
 import json
 from dotenv import load_dotenv
 
+# Load the environment variables
+load_dotenv()
+
 app = Flask(__name__)
 
-def setup_openai_api():  # sourcery skip: raise-specific-error
+def setup_openai_api():
     """Sets up the OpenAI API with the key from environment variables."""
     openai.api_key = os.getenv("OPENAI_API_KEY")
     if openai.api_key is None:
@@ -31,7 +34,7 @@ def ask():
 
     # Add the question to the conversation
     response = openai.ChatCompletion.create(
-        model="gpt-4",
+        model="gpt-3.5-turbo-0613",
         messages=messages,
         max_tokens=325,
         n=1,
@@ -44,11 +47,7 @@ def ask():
     # Add the answer to the conversation
     return jsonify(question=question, response=response_text)
 
-
 def main():
-    # Load the environment variables
-    load_dotenv()
-
     # Setup OpenAI API
     setup_openai_api()
 
