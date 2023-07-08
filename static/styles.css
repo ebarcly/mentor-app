@@ -27,12 +27,6 @@ body {
     overflow: hidden;
 }
 
-aside {
-    width: 100%;
-    background-color: #f4f4f4;
-    padding: 20px;
-}
-
 main {
     flex-grow: 1;
     padding: 20px;
