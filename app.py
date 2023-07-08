@@ -4,14 +4,13 @@ import os
 import json
 from dotenv import load_dotenv
 
-
-# Load the environment variables
-load_dotenv()
-
 app = Flask(__name__)
 
-# Get the OpenAI API key from the environment variable
-openai.api_key = os.getenv("OPENAI_API_KEY")
+def setup_openai_api():
+    """Sets up the OpenAI API with the key from environment variables."""
+    openai.api_key = os.getenv("OPENAI_API_KEY")
+    if openai.api_key is None:
+        raise Exception("OPENAI_API_KEY not found in environment variables. Make sure to set it.")
 
 @app.route('/', methods=['GET'])  
 def index():
@@ -40,10 +39,21 @@ def ask():
         temperature=0,
         top_p=1,
     )
-    response_text = response.choices[0].message['content'] + "\n"
+    response_text = response.choices[0].message['content']
 
     # Add the answer to the conversation
-    return jsonify(response=response_text) 
+    return jsonify(question=question, response=response_text)
+
+
+def main():
+    # Load the environment variables
+    load_dotenv()
+
+    # Setup OpenAI API
+    setup_openai_api()
+
+    # Start the Flask server
+    app.run(debug=True)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    main()
