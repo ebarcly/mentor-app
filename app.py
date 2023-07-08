@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 app = Flask(__name__)
 
-def setup_openai_api():
+def setup_openai_api():  # sourcery skip: raise-specific-error
     """Sets up the OpenAI API with the key from environment variables."""
     openai.api_key = os.getenv("OPENAI_API_KEY")
     if openai.api_key is None:
