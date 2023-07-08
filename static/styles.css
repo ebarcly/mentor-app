@@ -5,6 +5,7 @@ header {
     background-color: #10a37f;
     color: #fff;
     padding: 20px 0;
+    position: fixed;
 }
 
 body {
@@ -17,8 +18,10 @@ body {
 }
 
 main {
-    flex-grow: 1;
-    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 @media
