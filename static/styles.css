@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    background-color: #f4f4f4;
+}
+
 header {
     width: 100%;
     background-color: #10a37f;
@@ -9,9 +18,18 @@ header {
 
 .app-body {
     display: flex;
+    flex-direction: row;
+    max-width: 900px;
+    margin: 40px auto;
+    height: calc(100vh - 160px);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 aside {
+    width: 200px;
     background-color: #f4f4f4;
     padding: 20px;
 }
@@ -21,14 +39,6 @@ main {
     padding: 20px;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 60px;
-    background-color: #f4f4f4;
-    font-family: 'Roboto', sans-serif;
-}
 
 .icon {
     width: 100px;
