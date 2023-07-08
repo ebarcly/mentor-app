@@ -16,30 +16,21 @@ body {
     background-color: #f4f4f4;
 }
 
-.app-body {
-    display: flex;
-    flex-direction: column;
-    max-width: 900px;
-    margin: 40px auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
 main {
     flex-grow: 1;
     padding: 20px;
 }
 
-@media (min-width: 768px) {
-    .app-body {
-        flex-direction: row;
+@media
+only screen and (max-width: 600px) {
+    header {
+        padding: 20px;
     }
-    aside {
-        width: 200px;
+    main {
+        padding: 0;
     }
 }
+
 
 h1 {
     font-size: 32px;
