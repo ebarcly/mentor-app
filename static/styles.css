@@ -16,14 +16,11 @@ body {
     background-color: #f4f4f4;
 }
 
-
-
 .app-body {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     max-width: 900px;
     margin: 40px auto;
-    height: calc(100vh - 160px);
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -31,7 +28,7 @@ body {
 }
 
 aside {
-    width: 200px;
+    width: 100%;
     background-color: #f4f4f4;
     padding: 20px;
 }
@@ -41,17 +38,12 @@ main {
     padding: 20px;
 }
 
-.icon {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    margin-bottom: 20px;
-}
-
 @media (min-width: 768px) {
-    .icon {
-        width: 150px;
-        height: 150px;
+    .app-body {
+        flex-direction: row;
+    }
+    aside {
+        width: 200px;
     }
 }
 
