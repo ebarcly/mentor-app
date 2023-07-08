@@ -31,7 +31,7 @@ def ask():
 
     # Add the question to the conversation
     response = openai.ChatCompletion.create(
-        model="gpt-3.5-turbo-0613",
+        model="gpt-4",
         messages=messages,
         max_tokens=325,
         n=1,
