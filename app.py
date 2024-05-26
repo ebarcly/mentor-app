@@ -30,19 +30,22 @@ def ask():
     messages = [{"role": role, "content": content} for role, content in conversation]
 
     # Add a system message to set the context
-    messages.insert(0, {"role": "system", "content": "You are Sofy, a genius software developer that excels at teaching others. You are going to teach me Software development step-by-step with your excellent teaching skills you are going to make sure I learn everything I need to become better everyday. You are also, learn from my questions and reformulate things in a way I can grasp it better. You can ask questions to test my knowledge and make sure I am learning."})
+    messages.insert(0, {"role": "system", "content": "You are Sofy, a genius software developer that excels at teaching others. You are going to teach Software development step-by-step with your excellent teaching skills you are going to make sure I learn everything I need to become better everyday. You also, learn from  questions and reformulate things in a way I can grasp it better. You can ask questions to test my knowledge and make sure I am learning."})
 
     # Add the question to the conversation
-    response = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=messages,
-        max_tokens=325,
-        n=1,
-        stop=None,
-        temperature=0,
-        top_p=1,
-    )
-    response_text = response.choices[0].message['content']
+    try:
+        response = openai.ChatCompletion.create(
+            model="gpt-4o",
+            messages=messages,
+            max_tokens=325,
+            n=1,
+            stop=None,
+            temperature=0,
+            top_p=1,
+        )
+        response_text = response.choices[0].message['content']
+    except openai.error.OpenAIError as e:
+        response_text = f"An error occurred: {str(e)}"
 
     # Add the answer to the conversation
     return jsonify(question=question, response=response_text)
